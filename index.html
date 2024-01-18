@@ -4,54 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <title>katik (kalkulatorketik)</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to katik</h1>
-        <h4>hai sobat selamat datang di katik</h4>
-        <h5>sebuah web sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</h5>
+        <h1>SQUARE CALCULATOR</h1>
+        
+        <h3>_______________________________________________________</h3>
+        <h4>Welcome to SQUARE CALCULATOR</h4>
+        <p><strong>Kami hadir untuk membantumu menghitung keliling dan/atau luas sebuah bangun persegi.</strong></p>
+        <nav>
+          <ul>
+            <li><a href="#persegiKeliling">KELILING PERSEGI</a></li>
+            <li><a href="#persegiLuas">LUAS PERSEGI</a></li>
+          </ul>
+        </nav>
     </header>
+    <main>
+        <!--Gambar Persegi-->
+        <section class="image">
+          <img src="assets/gambar persegi.jpg" alt="Square Image.">
+        </section>
+        
+        <section>
+          <fieldset class="formula" id="persegiKeliling">
+            <legend><strong>KELILING PERSEGI</strong></legend>
+              <p class="penjelasan">
+                K = 4 x S
+                <br>
+                K adalah keliling persegi
+                <br>
+                S adalah sisi persegi
+              </p>
+          </fieldset>
+        </section>
+        <!--Label dan Input untuk keliling persegi-->
+        <section class="inputSection">
+          <label for="perimeterInput" id="lblPerimeter" class="lblinput">KELILING PERSEGI</label>
+          <input type="number" placeholder="masukkan sisi persegi. contoh = 5" id="perimeterInput" class="Squaresides">
+        </section>
+        <!--Tombol untuk menghitung keliling persegi-->
+        <section class="buttonSection">
+          <button onclick="keliling()" id="PerimeterCountButton">HITUNG</button>
+          <button id="PerimeterResetButton" onclick="reset1()">RESET</button>
+        </section>
+        <!--Hasil dari perhitungan-->
+        <section class="result">
+          <p id="resultPer" >Keliling Persegi Adalah :</p>
+          <p id="perResult"></p>
+        </section>
+        <section>
+        
+            <h3>_______________________________________________________</h3>
+          </section>
+        <section>
+        
+        <section>
+          <fieldset class="formula" id="persegiLuas">
+            <legend><strong>LUAS PERSEGI</strong></legend>
+              <p class="penjelasan">
+                L = S x S
+                <br>
+                L adalah luas persegi
+                <br>
+                S adalah sisi persegi
+              </p>
+          </fieldset>
+        </section>
+         <!--Label dan Input untuk luas persegi-->
+         <section class="inputSection">
+          <label for="areaInput" id="lblArea" class="lblinput">LUAS PERSEGI</label>
+          <input type="number" placeholder="masukkan sisi persegi. contoh = 5" id="areaInput" class="Squaresides">
+        </section>
+        <!--Tombol untuk menghitung luas persegi-->
+        <section class="buttonSection">
+          <button onclick="luas()" id="AreaCountButton">HITUNG</button>
+          <button id="AreaResetButton" onclick="reset2()">RESET</button>
+        </section>
+       <!--Hasil dari perhitungan-->
+        <section class="result">
+          <p id="resultAre" >Luas Persegi Adalah :</p>
+          <p id="areResult"></p>
+        </section>
+    </main>
+    <footer>
+      <p>Mini Project By : Zaynulia Afifa</p>
+    </footer>
 
-    <nav>
-        <p>Silahkan pilih opsi anda</p>
-        <p>
-            <button id="btnPersegi">persegi</button>
-            <button id="btnPersegiPanjang">persegi panjang</button>
-        </p>
-    </nav>
-
-    <section id="formPersegi" style="display: none;">
-        <h2>Menghitung Luas & Keliling Persegi</h2>
-        <img src="https://id-static.z-dn.net/files/d56/a76570ddbdc7567010d1444fc788f745.jpg"aalt="gambar persegi">
-        <p>LUAS Persegi = S X S</p>
-        <P>Dimana S= sisi dari persegi</P>
-        <label for="sisi">Masukkan panjang sisi:</label>
-        <input type="number" id="sisi" />
-        <button onclick="hitungLuasPersegi()">Hitung Luas</button>
-        <button onclick="hitungKelilingPersegi()">Hitung Keliling</button>
-        <button onclick="resetForm('formPersegi')">Reset</button>
-        <p id="hasilPersegi"></p>
-    </section>
-
-    <section id="formPersegiPanjang" style="display: none;">
-        <h2>Menghitung Luas & Keliling Persegi Panjang</h2>
-        <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1624507016/qtwi15urbbsypb0463v0.jpg
-        " alt="gambar persegi panjang">
-        <p>yang dimana P = panjang dan L= lebar</p>
-        <label for="panjang">Masukkan panjang:</label>
-        <input type="number" id="panjang" />
-        <br>
-        <br>
-        <label for="lebar">Masukkan lebar:</label>
-        <input type="number" id="lebar" />
-        <br>
-        <br>
-        <button onclick="hitungLuasPersegiPanjang()">Hitung Luas</button>
-        <button onclick="hitungKelilingPersegiPanjang()">Hitung Keliling</button>
-        <button onclick="resetForm('formPersegiPanjang')">Reset</button>
-        <p id="hasilPersegiPanjang"></p>
-    </section>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
