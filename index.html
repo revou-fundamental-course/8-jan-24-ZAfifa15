@@ -1,96 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalma - Kalkulator Matematik</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/webp" href="assets/revo.png.webp">
 </head>
+
 <body>
     <header>
-        <h1>SQUARE CALCULATOR</h1>
-        
-        <h3>_______________________________________________________</h3>
-        <h4>Welcome to SQUARE CALCULATOR</h4>
-        <p><strong>Kami hadir untuk membantumu menghitung keliling dan/atau luas sebuah bangun persegi.</strong></p>
-        <nav>
-          <ul>
-            <li><a href="#persegiKeliling">KELILING PERSEGI</a></li>
-            <li><a href="#persegiLuas">LUAS PERSEGI</a></li>
-          </ul>
-        </nav>
+        <h1>Kalma - Kalkulator Matematik</h1>
     </header>
     <main>
-        <!--Gambar Persegi-->
-        <section class="image">
-          <img src="assets/gambar persegi.jpg" alt="Square Image.">
-        </section>
-        
-        <section>
-          <fieldset class="formula" id="persegiKeliling">
-            <legend><strong>KELILING PERSEGI</strong></legend>
-              <p class="penjelasan">
-                K = 4 x S
-                <br>
-                K adalah keliling persegi
-                <br>
-                S adalah sisi persegi
-              </p>
-          </fieldset>
-        </section>
-        <!--Label dan Input untuk keliling persegi-->
-        <section class="inputSection">
-          <label for="perimeterInput" id="lblPerimeter" class="lblinput">KELILING PERSEGI</label>
-          <input type="number" placeholder="masukkan sisi persegi. contoh = 5" id="perimeterInput" class="Squaresides">
-        </section>
-        <!--Tombol untuk menghitung keliling persegi-->
-        <section class="buttonSection">
-          <button onclick="keliling()" id="PerimeterCountButton">HITUNG</button>
-          <button id="PerimeterResetButton" onclick="reset1()">RESET</button>
-        </section>
-        <!--Hasil dari perhitungan-->
-        <section class="result">
-          <p id="resultPer" >Keliling Persegi Adalah :</p>
-          <p id="perResult"></p>
-        </section>
-        <section>
-        
-            <h3>_______________________________________________________</h3>
-          </section>
-        <section>
-        
-        <section>
-          <fieldset class="formula" id="persegiLuas">
-            <legend><strong>LUAS PERSEGI</strong></legend>
-              <p class="penjelasan">
-                L = S x S
-                <br>
-                L adalah luas persegi
-                <br>
-                S adalah sisi persegi
-              </p>
-          </fieldset>
-        </section>
-         <!--Label dan Input untuk luas persegi-->
-         <section class="inputSection">
-          <label for="areaInput" id="lblArea" class="lblinput">LUAS PERSEGI</label>
-          <input type="number" placeholder="masukkan sisi persegi. contoh = 5" id="areaInput" class="Squaresides">
-        </section>
-        <!--Tombol untuk menghitung luas persegi-->
-        <section class="buttonSection">
-          <button onclick="luas()" id="AreaCountButton">HITUNG</button>
-          <button id="AreaResetButton" onclick="reset2()">RESET</button>
-        </section>
-       <!--Hasil dari perhitungan-->
-        <section class="result">
-          <p id="resultAre" >Luas Persegi Adalah :</p>
-          <p id="areResult"></p>
-        </section>
+        <div class="container">
+            <div class="container calc-container">
+                <div class="main-border">
+                    <div class="main-text">
+                        <h2>Welcome To Kalma</h2>
+                        <h4>Page ini berfungsi untuk menghitung luas keliling sebuah persegi</h4>
+                    </div>
+                    <div class="main-calc">
+                        <div class="main-box">
+                            <label for="AreaInput">Hitung Luas Persegi</label>
+                            <div class="main-picture">
+                                <img src="assets/ gambar persegi.jpg" alt="luas persegi">
+                            </div>
+                            <form id="calc-formArea">
+                                <input type="number" id="AreaInput" required />
+                                <button type="submit">Hitung</button>
+                                <button type="reset" id="calc-resetArea">Reset</button>
+                            </form>
+                            <div id="calc-resultArea"></div>
+                        </div>
+                        <div class="main-box">
+                            <label for="PerimeterInput">Hitung Keliling Persegi</label>
+                            <div class="main-picture">
+                                <img src="assets/gambar persegi.jpg" alt="keliling persegi">
+                            </div>
+                            <form id="calc-formPerimeter">
+                                <input type="number" id="PerimeterInput" required />
+                                <button type="submit">Hitung</button>
+                                <button type="reset" id="calc-resetPerimeter">Reset</button>
+                            </form>
+                            <div id="calc-resultPerimeter"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-      <p>Mini Project By : Zaynulia Afifa</p>
+        <h5> Mini Project By : Zaynulia Afifa</h5>
     </footer>
-
-    <script src="javascript/script.js"></script>
+    <script rel="javascript" src="js/script.js"></script>
 </body>
+
 </html>
